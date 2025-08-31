@@ -36,49 +36,60 @@ Developing advanced deep learning architectures to predict plant traits from ima
 # Create conda environment
 conda create -n plant_traits python=3.8
 conda activate plant_traits
+```
 
+```bash
 # Install dependencies
 pip install -r requirements.txt
+```
 
-# Download dataset (3.17GB)
-# Contact for Google Drive access
+```bash
+# Download dataset (3.17GB) - Contact for access
+# Place data in /data folder with images/ and tab_data.csv
+```
 
+```bash
 # Run the complete pipeline
-cd code
 python main.py
 ```
-## 📁 Project Files
 
-- diabetes.csv - Plant trait dataset with image references
-- tensorflow.ipynb - Complete TensorFlow implementation with data loading, preprocessing, model training, and evaluation
-- pytorch_model.ipynb - Complete PyTorch implementation with data loading, preprocessing, model training, and evaluation
-- README.md - Project documentation and framework comparison
+## 📁 Project Structure
+### Core Files:
+
+- main.py - Main execution pipeline and training orchestration
+- buildModel.py - Deep learning model architectures (CNN, RNN, LSTM)
+- loadData.py - Data loading, image processing, and dataset management
+- preprocessData.py - Data preprocessing, augmentation, and feature engineering
+- setupGPUS.py - GPU configuration and memory optimization
+- visualization.py - Results visualization and performance analysis
+- requirements.txt - Python dependencies and library versions
+
 
 ## 🔬 Model Architectures Explored
 ### Convolutional Neural Networks (CNN)
 
-- Purpose: Extract spatial features from plant images
-- Architecture: Multi-layer convolution with pooling layers
+- Extract spatial features from plant images
+- Multi-layer convolution with pooling layers
 - Performance: [Add your CNN results]
 
 ### Recurrent Neural Networks (RNN/LSTM)
 
-- Purpose: Process sequential plant growth data
-- Architecture: LSTM layers for temporal pattern recognition
+- Process sequential plant growth data
+- LSTM layers for temporal pattern recognition
 - Performance: [Add your RNN/LSTM results]
 
 ### Hybrid Approaches
 
-- Multi-modal fusion: Combining image and tabular data
-- Ensemble methods: Multiple architecture voting
-- Transfer learning: Pre-trained models fine-tuned for agriculture
+- Multi-modal fusion combining image and tabular data
+- Ensemble methods with multiple architecture voting
+- Transfer learning with pre-trained agricultural models
 
 ## 📈 Training Details
 
 - Epochs: 50 (configurable)
 - Training Time: ~40 minutes on HPC infrastructure
-- Batch Size: Optimized for GPU memory
-- Validation: K-fold cross-validation for robust evaluation
+- Hardware: GPU-accelerated with memory optimization
+- Validation: Robust evaluation with cross-validation
 - Metrics: Accuracy, F1-score, precision, recall
 
 ## 🎯 Research Contributions
